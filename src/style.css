@@ -1,0 +1,262 @@
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+html body{
+    background-color: #252525;
+    color: #fff;
+    font-family: Lobster, Regular;
+    margin: 0;
+}
+
+header{
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav img {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+}
+
+header nav ul{
+    list-style-type: none;
+    margin-top: 60px;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header nav ul li{
+    margin: 0 17px;
+}
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+header nav ul li a:hover{
+    color: #FBAA23;
+}
+
+.main .titre{
+    text-align: center;
+    margin: 200px 0;
+    font-size: 46px;
+    line-height: 16px;
+}
+
+.main .titre h1{
+    font-weight: 100;
+}
+
+.wave-bottom, .wave-top {
+    background-color: #252525;
+}
+
+.bieres{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    color: #252525;
+}
+
+.biere {
+    padding: 20px;
+    background-color: #FBAA23;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.biere h2 {
+    font-size: 64px;
+    margin: 0;
+}
+
+.biere .info-biere {
+    padding: 20px 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;;
+}
+
+.biere .info-biere img {
+    width: 250px;
+    height: 250px;
+    border-radius: 16px;
+    margin-right: 50px;
+}
+
+.biere .info-biere .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.biere .info-biere .text h3 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.apropos {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.apropos h2 {
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0 0 50px 0;
+}
+
+.apropos .apropos-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.apropos .vignette {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    background-color: #373737;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+}
+
+.apropos .vignette img {
+    width: 378px;
+    height: 378px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.apropos .vignette img:hover {
+    filter: brightness(50%);
+}
+
+.apropos .vignette h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+    color: #FBAA23;
+}
+
+.apropos .vignette p {
+    font-size: 24px;
+    margin: 10px 0 0 0;
+}
+
+.apropos .informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 45px;
+    width: 525px;
+    margin-left: 200px;
+}
+
+.apropos .informations p {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.apropos a {
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 50px;
+    padding: 12px 30px;
+    background-color: #FBAA23;
+    color: white;
+    border-radius: 8px;
+}
+
+.apropos a:hover {
+    background-color: #FFBF54;
+    color: #fff;
+}
+
+.fil-actu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 0;
+    border-top: #fff solid 2px;
+}
+
+.fil-actu h2 {
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.fil-actu h3 {
+    font-size: 50px;
+    font-weight: 400;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.fil-actu .fil-actu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 710px;
+    background-color: #373737;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 45px;
+    padding: 35px;
+}
+
+.fil-actu .fil-actu-content img {
+    width: 710px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.fil-actu .fil-actu-content img:hover {
+    filter: brightness(50%);
+}
+
+
+.fil-actu a {
+    margin: 50px 0;
+    font-size: 32px;
+    text-decoration: none;
+    padding: 12px 30px;
+    background-color: #FBAA23 ;
+    color: white;
+    border-radius: 8px;
+    font-family:"Lobster" ;
+}
+
+.fil-actu a:hover {
+    background-color: #FFBF54;
+    color: white;
+}
+
+.formulaire label{
+    font-family: "Amaranth";
+}
