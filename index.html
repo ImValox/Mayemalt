@@ -9,12 +9,8 @@
   <link rel="stylesheet" href="./src/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&display=swap"
-    rel="stylesheet">
-
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -43,10 +39,54 @@
         </path>
       </svg>
 
-      <!-- Présentation des bières -->
       <div class="biere">
         <h2>Nos bières</h2>
-        <div class="info-biere">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="info-biere">
+                <img src="./src/images/biere-ambree.png" alt="Bière ambrée">
+                <div class="text">
+                  <h3>Ambrée des Moulins</h3><br>
+                  <p>Une bière ambrée généreuse aux notes de caramel et de pain grillé, cette bière rend hommage aux anciens
+                    moulins de Laval. Brassée avec du malt local, elle offre une amertume équilibrée et une finale douce,
+                    parfaite
+                    pour les amateurs de bières artisanales authentiques.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="info-biere">
+                <img src="./src/images/brise-saison.png" alt="Brise de saison">
+                <div class="text">
+                  <h3>Brise de saison</h3><br>
+                  <p>Fraîche et légère, cette bière de saison est infusée avec des herbes et des agrumes locaux. Idéale pour
+                    les mois d'été, elle surprend par sa légèreté et ses arômes subtils de zeste d'orange et de coriandre,
+                    offrant une expérience rafraîchissante à chaque gorgée.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="info-biere">
+                <img src="./src/images/noire-rempart.png" alt="Noire des Remparts">
+                <div class="text">
+                  <h3>Noire des Remparts</h3><br>
+                  <p>
+                    Inspirée par l’histoire médiévale de Laval, cette bière noire robuste se distingue par ses saveurs de
+                    chocolat noir et de café torréfié. Avec une texture onctueuse et une touche de malt fumé, elle est
+                    parfaite pour accompagner un plat riche ou être dégustée seule.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <!-- <div class="info-biere">
           <img src="./src/images/biere-ambree.png" alt="Bière ambrée">
           <div class="text">
             <h3>Ambrée des Moulins</h3><br>
@@ -76,7 +116,7 @@
               parfaite pour accompagner un plat riche ou être dégustée seule.
             </p>
           </div>
-        </div>
+        </div> -->
       </div>
       <svg class="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#FBAA23" fill-opacity="1"
@@ -147,6 +187,7 @@
     </div>
     <script type="module" src="/src/main.js"></script>
   </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 
 </html>

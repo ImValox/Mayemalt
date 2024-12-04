@@ -2,14 +2,15 @@
     transition: all 0.3s ease-in-out;
 }
 
-html body{
+html body {
     background-color: #252525;
     color: #fff;
     font-family: Lobster, Regular;
     margin: 0;
+    overflow-x: hidden;
 }
 
-header{
+header {
     color: #fff;
     padding: 10px 0;
 }
@@ -24,7 +25,7 @@ header nav img {
     border-radius: 50%;
 }
 
-header nav ul{
+header nav ul {
     list-style-type: none;
     margin-top: 60px;
     display: flex;
@@ -33,40 +34,87 @@ header nav ul{
     justify-content: center;
 }
 
-header nav ul li{
+header nav ul li {
     margin: 0 17px;
 }
 
-header nav ul li a{
+header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
 }
 
-header nav ul li a:hover{
+header nav ul li a:hover {
     color: #FBAA23;
 }
 
-.main .titre{
+.main .titre {
     text-align: center;
     margin: 200px 0;
     font-size: 46px;
     line-height: 16px;
 }
 
-.main .titre h1{
+.main .titre h1 {
     font-weight: 100;
 }
 
-.wave-bottom, .wave-top {
+.wave-bottom,
+.wave-top {
     background-color: #252525;
 }
 
-.bieres{
+.bieres {
     text-align: center;
     flex-direction: column;
     display: flex;
     color: #252525;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #252525;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #252525;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .biere {
@@ -88,13 +136,14 @@ header nav ul li a:hover{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    ;
 }
 
 .biere .info-biere img {
     width: 250px;
     height: 250px;
-    border-radius: 16px;
+    border-radius: 26px;
     margin-right: 50px;
 }
 
@@ -107,6 +156,11 @@ header nav ul li a:hover{
 
 .biere .info-biere .text h3 {
     font-size: 32px;
+    margin: 0;
+}
+
+.biere .info-biere .text p {
+    font-size: 16px;
     margin: 0;
 }
 
@@ -246,10 +300,10 @@ header nav ul li a:hover{
     font-size: 32px;
     text-decoration: none;
     padding: 12px 30px;
-    background-color: #FBAA23 ;
+    background-color: #FBAA23;
     color: white;
     border-radius: 8px;
-    font-family:"Lobster" ;
+    font-family: "Lobster";
 }
 
 .fil-actu a:hover {
@@ -257,6 +311,6 @@ header nav ul li a:hover{
     color: white;
 }
 
-.formulaire label{
+.formulaire label {
     font-family: "Amaranth";
 }
