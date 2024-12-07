@@ -24,7 +24,7 @@ header {
 }
 
 header nav img {
-    display: flex;
+    display: none;
     position: absolute;
     top: 10px;
     left: 130px;
@@ -35,7 +35,6 @@ header nav img {
 
 header nav ul {
     list-style-type: none;
-    margin-top: 60px;
     display: flex;
     text-align: center;
     flex-direction: row;
@@ -368,13 +367,50 @@ header nav ul li a:hover {
     color: #FBAA23;
 }
 
-#circle {
-    position: absolute;
-    width: 500px;
-    transform: translateY(100px) translateX(50px);
+
+
+
+.footer-left #circle {
+    display: none;
 }
 
 
+@media screen and (min-width: 1240px) {
+    header nav img {
+        display: flex;
+    }
+
+    header nav ul {
+        margin-top: 60px;
+    }
+
+    .footer-left #circle {
+        display: block;
+    }
+
+    #circle .formes {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 100%;
+        transform: translate(-85%, -85%);
+    }
+
+    #circle {
+        position: absolute;
+        width: 500px;
+        transform: translateY(100px) translateX(50px);
+    }
+    #circle img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -85%);
+        z-index: 2;
+        width: 400px;
+        height: auto;
+    }
+}
 .contact-form {
     max-width: 500px;
     margin: 0 auto;
@@ -434,7 +470,7 @@ header nav ul li a:hover {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 150px;
     background-color: #FBAA23;
@@ -442,7 +478,58 @@ header nav ul li a:hover {
     width: 100%;
 }
 
+
+.footer-bottom .content a {
+    color: #252525;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-bottom .content a:hover {
+    color: #252525;
+    text-decoration: underline;
+}
+
+.footer-bottom .content img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #252525;
+    padding: 20px;
+}
+
+.footer-bottom .content .contact a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #252525;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-bottom .content .contact a svg {
+    margin-right: 10px;
+}
+
+.footer-bottom .content .reseaux a svg{
+    width: 30px;
+    height: auto;
+    color: #FBAA23;
+    font-size: 30px;
+    margin: 0 10px;
+    transition: all 0s ease;
+    background-color: #252525;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer-bottom .content .reseaux a svg:hover {
+    color: #996100;
+}
+
 .back-to-top {
+    z-index: 1000;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -451,11 +538,20 @@ header nav ul li a:hover {
     background-color: #373737;
     border-radius: 8px;
     cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px #FBAA2333;
+    transform: translateY(20px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .back-to-top a svg {
@@ -469,6 +565,130 @@ header nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-.back-to-top:hover::before {
-    color: #FBAA23;
-}
+/* Media Queries */
+
+/* Tablet (768px and below) */
+@media screen and (max-width: 768px) {
+  
+    header nav ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .main .titre {
+      margin: 100px 0;
+      font-size: 36px;
+    }
+  
+    .biere .info-biere {
+      padding: 20px;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .biere .info-biere img {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    .apropos .apropos-content {
+      flex-direction: column;
+    }
+  
+    .apropos .informations {
+      margin: 30px 0;
+      width: 90%;
+    }
+
+    .fil-actu {
+        padding: 100px 0 0 0;
+    }
+  
+    .fil-actu .fil-actu-content {
+      width: auto;
+    }
+  
+    .fil-actu .fil-actu-content img {
+      width: 100%;
+    }
+
+    footer #square {
+        display: none;
+    }
+
+    .footer-content {
+      flex-direction: column;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .footer-content .footer-left  {
+        text-align: center;
+    }
+  
+    #circle {
+      position: relative;
+      transform: none;
+      width: 100%;
+    }
+  
+    .contact-form {
+      width: 90%;
+    }
+
+    .formulaire {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .formulaire form div input, textarea {
+        transform: translateX(-20px);
+    }
+
+    .footer-bottom content {
+        font-size: 12px;
+    }
+  }
+  
+  /* Mobile (480px and below) */
+  @media screen and (max-width: 480px) {
+    .main .titre {
+      font-size: 28px;
+    }
+  
+    .biere h2 {
+      font-size: 42px;
+    }
+  
+    .biere .info-biere img {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .apropos .vignette img {
+      width: 100%;
+      height: auto;
+    }
+
+    footer #square {
+        display: none;
+    }
+  
+    .footer-bottom .content {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 0;
+      gap: 20px;
+    }
+  
+    .footer-bottom .content .reseaux {
+      display: flex;
+      gap: 10px;
+    }
+  
+    #square {
+      width: 90%;
+    }
+  }

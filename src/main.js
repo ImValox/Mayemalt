@@ -33,24 +33,77 @@ const swiper = new Swiper('.swiper-container', {
     }
   });
 
-// Add to main.js or a script tag
 document.addEventListener('DOMContentLoaded', () => {
-  const backToTop = document.getElementById('backToTop');
-  
-  // Show button when scrolling down 100px
-  window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-          backToTop.style.display = 'flex';
-      } else {
-          backToTop.style.display = 'none';
-      }
-  });
+    const backToTop = document.getElementById('backToTop');
+    let isScrolling = false;
 
-  // Smooth scroll to top
-  backToTop.addEventListener('click', () => {
-      window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-      });
-  });
+    // Throttle scroll event
+    const throttleScroll = () => {
+        if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 100) {
+                    backToTop?.classList.add('visible');
+                } else {
+                    backToTop?.classList.remove('visible');
+                }
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    };
+
+    const smoothScrollToTop = () => {
+        const duration = 600;
+        const start = window.pageYOffset;
+        const startTime = performance.now();
+
+        const easeInOutCubic = t => t < 0.5 
+            ? 4 * t * t * t 
+            : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        const animation = currentTime => {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            const currentPosition = start * (1 - easeInOutCubic(progress));
+
+            window.scrollTo(0, currentPosition);
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        };
+
+        requestAnimationFrame(animation);
+    };
+
+    // Event Listeners
+    window.addEventListener('scroll', throttleScroll, { passive: true });
+    backToTop?.addEventListener('click', e => {
+        e.preventDefault();
+        smoothScrollToTop();
+    });
+
+    // Cleanup
+    return () => {
+        window.removeEventListener('scroll', throttleScroll);
+        backToTop?.removeEventListener('click', smoothScrollToTop);
+    };
 });
+
+const images = document.querySelectorAll('.bieres-anim');
+const imageSources = [
+  'src/images/biere-vide.png',
+  'src/images/biere-remplissage.png',
+  'src/images/biere-pleine.png'
+];
+
+let currentIndex = 0;
+
+const changeImageSource = () => {
+  images.forEach(image => {
+    image.src = imageSources[currentIndex];
+  });
+  currentIndex = (currentIndex + 1) % imageSources.length;
+};
+
+setInterval(changeImageSource, 3000);
