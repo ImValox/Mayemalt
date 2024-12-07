@@ -6,11 +6,12 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mayemalt</title>
-  <link rel="stylesheet" href="./src/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -48,8 +49,10 @@
                 <img src="./src/images/biere-ambree.png" alt="Bière ambrée">
                 <div class="text">
                   <h3>Ambrée des Moulins</h3><br>
-                  <p>Une bière ambrée généreuse aux notes de caramel et de pain grillé, cette bière rend hommage aux anciens
-                    moulins de Laval. Brassée avec du malt local, elle offre une amertume équilibrée et une finale douce,
+                  <p>Une bière ambrée généreuse aux notes de caramel et de pain grillé, cette bière rend hommage aux
+                    anciens
+                    moulins de Laval. Brassée avec du malt local, elle offre une amertume équilibrée et une finale
+                    douce,
                     parfaite
                     pour les amateurs de bières artisanales authentiques.</p>
                 </div>
@@ -60,8 +63,10 @@
                 <img src="./src/images/brise-saison.png" alt="Brise de saison">
                 <div class="text">
                   <h3>Brise de saison</h3><br>
-                  <p>Fraîche et légère, cette bière de saison est infusée avec des herbes et des agrumes locaux. Idéale pour
-                    les mois d'été, elle surprend par sa légèreté et ses arômes subtils de zeste d'orange et de coriandre,
+                  <p>Fraîche et légère, cette bière de saison est infusée avec des herbes et des agrumes locaux. Idéale
+                    pour
+                    les mois d'été, elle surprend par sa légèreté et ses arômes subtils de zeste d'orange et de
+                    coriandre,
                     offrant une expérience rafraîchissante à chaque gorgée.
                   </p>
                 </div>
@@ -73,7 +78,8 @@
                 <div class="text">
                   <h3>Noire des Remparts</h3><br>
                   <p>
-                    Inspirée par l’histoire médiévale de Laval, cette bière noire robuste se distingue par ses saveurs de
+                    Inspirée par l’histoire médiévale de Laval, cette bière noire robuste se distingue par ses saveurs
+                    de
                     chocolat noir et de café torréfié. Avec une texture onctueuse et une touche de malt fumé, elle est
                     parfaite pour accompagner un plat riche ou être dégustée seule.
                   </p>
@@ -166,27 +172,59 @@
 
 
   <footer>
-    <!-- Formilaire de contact -->
-    <div class="formulaire">
-      <form>
-        <ul>
-          <li>
-            <label>Nom et Prénom&nbsp;:</label>
-            <input type="text" />
-          </li>
-          <li>
-            <label>E-mail&nbsp;:</label>
-            <input type="email" />
-          </li>
-          <li>
-            <label>Message&nbsp;:</label>
-            <textarea name="user_message"></textarea>
-          </li>
-        </ul>
-      </form>
+    <div class="formes">
+      <div id="square"></div>
+      <div id="square"></div>
+    </div>
+    <div class="footer-content">
+      <!-- Formilaire de contact -->
+      <div class="footer-left">
+        <h2>N'hésitez pas à nous <p>Contacter !</p></h2>
+        <div id="circle"> 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 593 463" fill="none">
+            <path
+              d="M593 296.5C593 460.252 460.252 463 296.5 463C132.748 463 0 460.252 0 296.5C0 132.748 132.748 0 296.5 0C460.252 0 593 132.748 593 296.5Z"
+              fill="#FBAA23" />
+          </svg>
+        </div>
+      </div>
+      <div class="formulaire">
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nom et Prénom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+        
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-round"></div>
+    <div class="footer-bottom">
+      <div class="content">
+        <div class="reseaux">
+          <a href="#"><img src="./src/images/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="./src/images/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="./src/images/twitter.png" alt="Twitter"></a>
+        </div>
+        <p>© 2021 Mayemalt - Tous droits réservés</p>
+      </div>
     </div>
     <script type="module" src="/src/main.js"></script>
   </footer>
+  <div class="back-to-top" id="backToTop">
+    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 244l144-144l144 144M256 120v292"/></svg></a>
+  </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 

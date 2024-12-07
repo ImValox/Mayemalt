@@ -32,3 +32,25 @@ const swiper = new Swiper('.swiper-container', {
       }
     }
   });
+
+// Add to main.js or a script tag
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTop = document.getElementById('backToTop');
+  
+  // Show button when scrolling down 100px
+  window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+          backToTop.style.display = 'flex';
+      } else {
+          backToTop.style.display = 'none';
+      }
+  });
+
+  // Smooth scroll to top
+  backToTop.addEventListener('click', () => {
+      window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+      });
+  });
+});
