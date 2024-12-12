@@ -1,90 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mayemalt - En Savoir Plus</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayemalt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav>
-          <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#">Nos Bières</a></li>
-            <li><a href="#">A Propos</a></li>
-            <li><a href="ensavoirplus.html">La Brasserie</a></li>
-            <li><a href="actualites.html">Actualités</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div class="main">
-
-        <h2>Création de la bière</h2>
-
-        <!-- CARROUSSEL -->
-
-        <div class="ingredients">
-            <!-- Image ingredients-->
-
-            <p>Chez Mayemalt, chaque bière raconte une histoire, celle d'un savoir-faire artisanal et d'un engagement pour des pratiques respectueuses de l'environnement. Thierry, notre maître brasseur passionné, veille à ce que chaque étape de fabrication reflète l’authenticité, la qualité artisanale et la durabilité qui font la renommée de nos bières.</p>
-
-            <p>Tout commence par une sélection rigoureuse des ingrédients, privilégiant les malts et houblons locaux, issus de producteurs engagés dans l'agriculture biologique ou raisonnée. Chaque ingrédient est soigneusement choisi pour ses qualités aromatiques uniques et sa provenance éthique, garantissant ainsi des bières aussi bonnes pour la planète que pour le palais.</p>
-            
-            <p>Notre processus de brassage allie savoir-faire ancestral et techniques modernes. Le malt, provenant principalement de fermes locales, est délicatement concassé pour en extraire toute la richesse. Il est ensuite infusé dans l’eau pure et filtrée localement pour créer un moût de qualité. Le houblon, issu de cultures durables, est ajouté avec précision pour apporter l’amertume et les arômes distinctifs de nos bières.</p>
-        </div>
-
-
-        <div class="fermentation">
-            <!-- Image cuves de fermentation-->
-        
-            <p>La fermentation se déroule dans des cuves à température contrôlée, un procédé qui minimise la consommation énergétique, tout en garantissant aux levures un environnement optimal pour développer des saveurs profondes et complexes. Chaque bière est ensuite maturée avec soin, favorisant une fermentation naturelle et durable, avant d’être embouteillée avec des matériaux écoresponsables.</p>
-
-            <p>Chez Mayemalt, rien n’est laissé au hasard. Thierry s’assure que chaque brassée respecte nos standards d’excellence et de durabilité, offrant des bières artisanales uniques qui sont un véritable reflet de notre passion pour le brassage et de notre engagement envers l’environnement.</p>
-        </div>
-
-        <div class="visite">
-            <h2>Visite de la brasserie</h2>
-
-            <p>Bienvenue chez Mayemalt, où notre brasserie artisanale vous ouvre ses portes pour une expérience authentique et conviviale.</p>
-        </div>
-
-
-        <div class="horaires">
-            <h3>Horaires d’ouverture</h3>
-
-            <p> Lundi Fermée
-                Mardi 18h00 - 00h00
-                Mercredi 18h00-00h00
-                Jeudi 18h00 -00h00
-                Vendredi 18h00 -00h00
-                Samedi 18h00 -00h00
-                Dimanche 18h00 -00h00
-            </p>
-        </div>
-        
-
-        <div class="visitedescription">
-            <!-- Image entrée bar-->
-
-            <p>En entrant, vous êtes accueilli par notre élégant bar, véritable cœur de la brasserie. Des fûts en bois ornent l'espace industriel, tandis que la lumière tamisée crée une atmosphère chaleureuse. Le design allie des briques apparentes et une hauteur sous plafond impressionnante, offrant un cadre parfait pour déguster nos bières artisanales. Chaque détail du décor invite à la détente et à la découverte, que ce soit pour partager un verre ou en apprendre davantage sur nos créations brassicoles.</p>
-        
-            <p>Après ce moment de dégustation, vous pouvez poursuivre la visite dans la zone de production. Vous y découvrirez de grandes cuves en inox alignées le long du mur, témoignant du savoir-faire de Thierry, notre maître brasseur. L'ambiance mêle bois et métal, combinant tradition et innovation. Une grande table en bois massif au centre de la pièce invite à l’échange, entourée de bouteilles soigneusement exposées, prêtes à être dégustées après leur élaboration. Une expérience immersive dans l’univers passionnant de la brasserie artisanale.</p>
-
-            <!-- Image fond dégustation-->
-        </div>
-
-
-        <div class="juridique">
-            <h2>Forme juridique</h2>
-
-            <p>Mayemalt est une micro-entreprise spécialisée dans la production artisanale de bière, fondée et gérée par Thierry Dubois. Grâce à ce statut, la brasserie bénéficie d'une gestion simplifiée tout en permettant à Thierry de se concentrer sur la création de bières de qualité, brassées avec passion.</p>
-        </div>
-
+  <div class="loader-container">
+    <div class="loader">
+      <img src="./src/images/logo.jpg" alt="Chargement..." class="loader-image">
+      <div class="loader-text">Chargement...</div>
+    </div>
+  </div>
+  <header>
+    <nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-     
-      <footer>
-        <!-- A COMPLETER-->
-      </footer>
+      <ul class="nav-menu">
+        <img class="logo" src="./src/images/logo.jpg" alt="Logo">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#bieres">Nos Bières</a></li>
+        <li><a href="#apropos">A Propos</a></li>
+        <li><a href="ensavoirplus.html">La Brasserie</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="main">
+    <div class="bieres">
+      <svg class="wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#FBAA23" fill-opacity="1"
+          d="M0,32L60,74.7C120,117,240,203,360,208C480,213,600,139,720,112C840,85,960,107,1080,138.7C1200,171,1320,213,1380,234.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+        </path>
+      </svg>
+
+      <div class="biere">
+        <h2>Nos bières</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="info-biere">
+                <img src="./src/images/biere-ambree.png" alt="Bière ambrée">
+                <div class="text">
+                  <h3>Ambrée des Moulins</h3><br>
+                  <p>Une bière ambrée généreuse aux notes de caramel et de pain grillé, cette bière rend hommage aux
+                    anciens
+                    moulins de Laval. Brassée avec du malt local, elle offre une amertume équilibrée et une finale
+                    douce,
+                    parfaite
+                    pour les amateurs de bières artisanales authentiques.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="info-biere">
+                <img src="./src/images/brise-saison.png" alt="Brise de saison">
+                <div class="text">
+                  <h3>Brise de saison</h3><br>
+                  <p>Fraîche et légère, cette bière de saison est infusée avec des herbes et des agrumes locaux. Idéale
+                    pour
+                    les mois d'été, elle surprend par sa légèreté et ses arômes subtils de zeste d'orange et de
+                    coriandre,
+                    offrant une expérience rafraîchissante à chaque gorgée.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="info-biere">
+                <img src="./src/images/noire-rempart.png" alt="Noire des Remparts">
+                <div class="text">
+                  <h3>Noire des Remparts</h3><br>
+                  <p>
+                    Inspirée par l’histoire médiévale de Laval, cette bière noire robuste se distingue par ses saveurs
+                    de
+                    chocolat noir et de café torréfié. Avec une texture onctueuse et une touche de malt fumé, elle est
+                    parfaite pour accompagner un plat riche ou être dégustée seule.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+      <div class="description-mayemalt">
+        <div class="text-image">
+          <p>
+            Chez <b>Mayemalt</b>, chaque bière raconte une histoire, celle d'un savoir-faire artisanal et d'un
+            engagement pour
+            des pratiques respectueuses de l'environnement. <b>Thierry</b>, notre maître brasseur passionné, veille à ce
+            que
+            chaque étape de fabrication reflète l’authenticité, la qualité artisanale et la durabilité qui font la
+            renommée de nos bières. <br> <br>
+
+            Tout commence par une sélection rigoureuse des ingrédients, privilégiant les malts et houblons locaux, issus
+            de producteurs engagés dans l'agriculture biologique ou raisonnée. Chaque ingrédient est soigneusement
+            choisi
+            pour ses qualités aromatiques uniques et sa provenance éthique, garantissant ainsi des bières aussi bonnes
+            pour la planète que pour le palais. <br> <br>
+
+            Notre processus de brassage allie savoir-faire ancestral et techniques modernes. Le malt, provenant
+            principalement de fermes locales, est délicatement concassé pour en extraire toute la richesse. Il est
+            ensuite
+            infusé dans l’eau pure et filtrée localement pour créer un moût de qualité. Le houblon, issu de cultures
+            durables, est ajouté avec précision pour apporter l’amertume et les arômes distinctifs de nos bières.
+          </p>
+          <img src="./src/images/images-ingrdients.png" alt="Brasserie">
+        </div>
+        <div class="text-image">
+          <p>
+            La fermentation se déroule dans des cuves à température contrôlée, un procédé qui minimise la consommation
+            énergétique, tout en garantissant aux levures un environnement optimal pour développer des saveurs profondes
+            et complexes. Chaque bière est ensuite maturée avec soin, favorisant une fermentation naturelle et durable,
+            avant d’être embouteillée avec des matériaux écoresponsables. <br> <br>
+
+            Chez <b>Mayemalt</b>, rien n’est laissé au hasard. <b>Thierry</b> s’assure que chaque brassée respecte nos
+            standards
+            d’excellence et de durabilité, offrant des bières artisanales uniques qui sont un véritable reflet de notre
+            passion pour le brassage et de notre engagement envers l’environnement.
+          </p>
+          <img src="./src/images/images-ingrdients.png" alt="Brasserie">
+        </div>
+      </div>
+      <svg class="wave-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#FBAA23" fill-opacity="1"
+          d="M0,32L60,74.7C120,117,240,203,360,208C480,213,600,139,720,112C840,85,960,107,1080,138.7C1200,171,1320,213,1380,234.7L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path>
+      </svg>
+    </div>
+
+    <div class="horaires">
+      <h2>Visite de la brasserie</h2>
+      <p>Bienvenue chez Mayemalt, où notre brasserie artisanale vous ouvre ses portes pour une expérience authentique et
+        conviviale.</p>
+      <h2>Horaires d’ouverture</h2>
+      <div class="horaires-list">
+        <p>Lundi Fermée</p>
+        <p>Mardi 18h00 - 00h00</p>
+        <p>Mercredi 18h00-00h00</p>
+        <p>Jeudi 18h00 -00h00</p>
+        <p>Vendredi 18h00 -00h00</p>
+        <p>Samedi 18h00 -00h00</p>
+        <p>Dimanche 18h00 -00h00</p>
+      </div>
+    </div>
+
+    <div class="degustation-mayemalt">
+      <div class="text-image">
+        <p>
+          En entrant, vous êtes accueilli par notre élégant bar, véritable cœur de la brasserie. Des fûts en bois ornent
+          l'espace industriel, tandis que la lumière tamisée crée une atmosphère chaleureuse. Le design allie des
+          briques apparentes et une hauteur sous plafond impressionnante, offrant un cadre parfait pour déguster nos
+          bières artisanales. Chaque détail du décor invite à la détente et à la découverte, que ce soit pour partager
+          un verre ou en apprendre davantage sur nos créations brassicoles.
+        </p>
+        <img class="visite-photo" src="./src/images/visite-brasserie-bar-1.png" alt="Brasserie">
+      </div>
+      <div class="text-image">
+        <p>Après ce moment de dégustation, vous pouvez poursuivre la visite dans la zone de production. Vous y
+          découvrirez de grandes cuves en inox alignées le long du mur, témoignant du savoir-faire de Thierry, notre
+          maître brasseur. L'ambiance mêle bois et métal, combinant tradition et innovation. Une grande table en bois
+          massif au centre de la pièce invite à l’échange, entourée de bouteilles soigneusement exposées, prêtes à être
+          dégustées après leur élaboration. Une expérience immersive dans l’univers passionnant de la brasserie
+          artisanale.</p>
+        <img class="degustation-photo" src="./src/images/visite-brasserie-degustation-cuves-1.png" alt="Brasserie">
+      </div>
+    </div>
+  </div>
+
+  <div class="juridique">
+    <h2>Forme juridique</h2>
+    <p>Mayemalt est une micro-entreprise spécialisée dans la production artisanale de bière, fondée et gérée par Thierry
+      Dubois. Grâce à ce statut, la brasserie bénéficie d'une gestion simplifiée tout en permettant à Thierry de se
+      concentrer sur la création de bières de qualité, brassées avec passion.</p>
+  </div>
+  </div>
+  <footer>
+    <div class="formes">
+      <div id="square"></div>
+      <div id="square"></div>
+    </div>
+    <div class="footer-content">
+      <div class="footer-left">
+        <h2>N'hésitez pas à nous <p>Contacter !</p>
+        </h2>
+        <div id="circle">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 593 463" fill="none">
+            <path
+              d="M593 296.5C593 460.252 460.252 463 296.5 463C132.748 463 0 460.252 0 296.5C0 132.748 132.748 0 296.5 0C460.252 0 593 132.748 593 296.5Z"
+              fill="#FBAA23" />
+          </svg>
+          <img src="src/images/biere-vide.png" alt="" class="bieres-anim">
+          <div class="formes">
+            <div id="square"></div>
+            <div id="square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="formulaire" id="contact">
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nom et Prénom</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <div class="border-round"></div>
+    <div class="footer-bottom">
+      <div class="content">
+        <div class="logo">
+          <img src="./src/images/logo.jpg" alt="Logo">
+        </div>
+        <div class="contact">
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+              <path
+                d="M25.8333 10L18.0833 3.42501C17.3729 2.81006 16.4532 2.47009 15.5 2.47009C14.5468 2.47009 13.6271 2.81006 12.9167 3.42501L5.16667 10C4.75639 10.3551 4.429 10.7907 4.20628 11.2778C3.98356 11.7649 3.87063 12.2924 3.875 12.825V23.75C3.875 24.7446 4.28326 25.6984 5.00996 26.4017C5.73667 27.1049 6.72229 27.5 7.75 27.5H23.25C24.2777 27.5 25.2633 27.1049 25.99 26.4017C26.7167 25.6984 27.125 24.7446 27.125 23.75V12.8125C27.1275 12.282 27.0137 11.7569 26.7911 11.2721C26.5684 10.7873 26.242 10.3537 25.8333 10ZM18.0833 25H12.9167V18.75C12.9167 18.4185 13.0528 18.1005 13.295 17.8661C13.5372 17.6317 13.8658 17.5 14.2083 17.5H16.7917C17.1342 17.5 17.4628 17.6317 17.705 17.8661C17.9472 18.1005 18.0833 18.4185 18.0833 18.75V25ZM24.5417 23.75C24.5417 24.0815 24.4056 24.3995 24.1633 24.6339C23.9211 24.8683 23.5926 25 23.25 25H20.6667V18.75C20.6667 17.7554 20.2584 16.8016 19.5317 16.0984C18.805 15.3951 17.8194 15 16.7917 15H14.2083C13.1806 15 12.195 15.3951 11.4683 16.0984C10.7416 16.8016 10.3333 17.7554 10.3333 18.75V25H7.75C7.40743 25 7.07889 24.8683 6.83665 24.6339C6.59442 24.3995 6.45833 24.0815 6.45833 23.75V12.8125C6.45857 12.635 6.49785 12.4596 6.57357 12.298C6.6493 12.1363 6.75972 11.9921 6.8975 11.875L14.6475 5.31251C14.8832 5.11211 15.1862 5.00159 15.5 5.00159C15.8138 5.00159 16.1168 5.11211 16.3525 5.31251L24.1025 11.875C24.2403 11.9921 24.3507 12.1363 24.4264 12.298C24.5021 12.4596 24.5414 12.635 24.5417 12.8125V23.75Z"
+                fill="#252525" />
+            </svg>
+            <p>206 Boulevard Jean Jaures</p>
+          </a>
+          <a href="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g fill="none" fill-rule="evenodd">
+                <path
+                  d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                <path fill="currentColor"
+                  d="M16.552 22.133c-1.44-.053-5.521-.617-9.795-4.89c-4.273-4.274-4.836-8.354-4.89-9.795c-.08-2.196 1.602-4.329 3.545-5.162a1.47 1.47 0 0 1 1.445.159c1.6 1.166 2.704 2.93 3.652 4.317a1.504 1.504 0 0 1-.256 1.986l-1.951 1.449a.48.48 0 0 0-.142.616c.442.803 1.228 1.999 2.128 2.899s2.153 1.738 3.012 2.23a.483.483 0 0 0 .644-.162l1.27-1.933a1.503 1.503 0 0 1 2.056-.332c1.407.974 3.049 2.059 4.251 3.598a1.47 1.47 0 0 1 .189 1.485c-.837 1.953-2.955 3.616-5.158 3.535" />
+              </g>
+            </svg>
+            <p>mayemalt@gmail.com</p>
+          </a>
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m7 9l3.75 3a2 2 0 0 0 2.5 0L17 9m4 8V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2" />
+            </svg>
+            <p>02 43 53 73 99</p>
+          </a>
+        </div>
+        <div class="reseaux">
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28" />
+            </svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95" />
+            </svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3" />
+            </svg></a>
+          <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor"
+                d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.2 4.2 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.52 8.52 0 0 1-5.33 1.84q-.51 0-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23" />
+            </svg></a>
+        </div>
+        <div class="info-legal">
+          <a href="#">Mentions légales</a>
+          <a href="#">Politique de confidentialité</a>
+          <p>© 2024 Mayemalt - Tous droits réservés</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </footer>
+  <div class="back-to-top" id="backToTop">
+    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48"
+          d="m112 244l144-144l144 144M256 120v292" />
+      </svg></a>
+  </div>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
+
 </html>

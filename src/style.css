@@ -39,6 +39,7 @@ header nav ul {
     text-align: center;
     flex-direction: row;
     justify-content: center;
+    transform: none;
 }
 
 header nav ul li {
@@ -55,7 +56,68 @@ header nav ul li a:hover {
     color: #FBAA23;
 }
 
+.hamburger {
+    z-index: 998;
+    display: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #FBAA23;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+.loader {
+    text-align: center;
+}
+
+.loader-image {
+    width: 100px;
+    height: auto;
+    animation: float 2s ease-in-out infinite;
+    border-radius: 50%;
+}
+
+.loader-text {
+    color: #FBAA23;
+    font-family: 'Lobster', cursive;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 .main {
+    position: relative;
     flex: 1;
 }
 
@@ -87,6 +149,7 @@ header nav ul li a:hover {
     height: 100%;
     padding: 20px 0;
     position: relative;
+    z-index: 1;
 }
 
 .swiper-button-prev,
@@ -96,6 +159,7 @@ header nav ul li a:hover {
     transform: translateY(-50%);
     width: 44px;
     height: 44px;
+    z-index: 2;
 }
 
 .swiper-button-prev {
@@ -110,6 +174,7 @@ header nav ul li a:hover {
     position: absolute;
     bottom: 10px;
     width: 100%;
+    z-index: 2;
 }
 
 .swiper-pagination-bullet {
@@ -173,6 +238,236 @@ header nav ul li a:hover {
 .biere .info-biere .text p {
     font-size: 16px;
     margin: 0;
+}
+
+.description-mayemalt {
+    background-color: #FBAA23;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    padding: 0 100px;
+    font-size: 25px;
+    margin: 0;
+}
+
+.description-mayemalt .text-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-mayemalt .text-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.description-mayemalt .text-image:nth-last-child(1) {
+    flex-direction: row-reverse;
+}
+
+.description-mayemalt .text-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 26px;
+    margin-right: 30px;
+}
+
+.horaires {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20% 100px 20%;
+    color: #fff;
+}
+
+.horaires h2 {
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0;
+}
+.horaires p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.horaires .horaires-list p {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.degustation-mayemalt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:start;
+    padding: 0 50px;
+    font-size: 25px;
+    margin: 0;
+}
+
+.degustation-mayemalt .text-image {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.degustation-mayemalt .text-image:nth-last-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.degustation-mayemalt .text-image .visite-photo {
+    width: 600px;
+    height: 300px;
+    border-radius: 26px;
+    margin: 0 30px;
+}
+
+.degustation-mayemalt .text-image .degustation-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 26px;
+    margin: 0 30px;
+}
+
+.juridique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20% 100px 20%;
+    color: #fff;
+}
+
+.juridique h2 {
+    font-size: 64px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.juridique p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .description-mayemalt {
+        padding: 0 50px;
+        font-size: 20px;
+    }
+
+    .description-mayemalt .text-image,
+    .description-mayemalt .text-image:nth-last-child(1) {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .description-mayemalt .text-image img {
+        width: 250px;
+        height: 250px;
+        margin-right: 0;
+    }
+
+    .horaires {
+        padding: 0 10% 50px 10%;
+    }
+
+    .horaires h2 {
+        font-size: 48px;
+    }
+
+    .horaires p,
+    .horaires .horaires-list p {
+        font-size: 20px;
+    }
+
+    .degustation-mayemalt {
+        padding: 0 30px;
+        font-size: 20px;
+    }
+
+    .degustation-mayemalt .text-image,
+    .degustation-mayemalt .text-image:nth-last-child(1) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .degustation-mayemalt .text-image .visite-photo {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .degustation-mayemalt .text-image .degustation-photo {
+        width: 250px;
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .juridique {
+        padding: 0 10% 50px 10%;
+    }
+
+    .juridique h2 {
+        font-size: 48px;
+    }
+
+    .juridique p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .description-mayemalt {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .description-mayemalt .text-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .horaires h2 {
+        font-size: 36px;
+    }
+
+    .horaires p,
+    .horaires .horaires-list p {
+        font-size: 16px;
+    }
+
+    .degustation-mayemalt {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .degustation-mayemalt .text-image .degustation-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .juridique {
+        padding: 0 20px 30px 20px;
+    }
+
+    .juridique h2 {
+        font-size: 36px;
+    }
+
+    .juridique p {
+        font-size: 16px;
+    }
 }
 
 .apropos {
@@ -320,6 +615,66 @@ header nav ul li a:hover {
 .fil-actu a:hover {
     background-color: #FFBF54;
     color: white;
+}
+
+.fil-actualites {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.fil-actualites h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.actualites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+}
+
+.actualite {
+    background: #373737;
+    border-radius: 16px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.actualite img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.actualite h2 {
+    color: #FBAA23;
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.actualite p {
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.actualite:hover {
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+    .actualites {
+        grid-template-columns: 1fr;
+    }
+    
+    .fil-actualites h1 {
+        font-size: 36px;
+    }
 }
 
 .formes {
@@ -565,14 +920,44 @@ header nav ul li a:hover {
     transform: translateY(-3px);
 }
 
-/* Media Queries */
-
-/* Tablet (768px and below) */
 @media screen and (max-width: 768px) {
   
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
     header nav ul {
-      flex-direction: column;
-      gap: 20px;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+        justify-content: start;
+        background: #252525;
+        height: 100vh;
+        padding-top: 80px;
+        transition: 0.3s;
+        z-index: 999;
+        margin: 0;
+    }
+
+    header nav ul.active {
+        right: 0;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
     }
   
     .main .titre {
@@ -652,7 +1037,6 @@ header nav ul li a:hover {
     }
   }
   
-  /* Mobile (480px and below) */
   @media screen and (max-width: 480px) {
     .main .titre {
       font-size: 28px;
