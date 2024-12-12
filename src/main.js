@@ -1,5 +1,3 @@
-import './style.css'
-
 const ANIMATION_DURATION = 600;
 const SCROLL_THRESHOLD = 100;
 const LOADER_DELAY = 2000;
